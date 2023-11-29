@@ -5,7 +5,7 @@
 <p align="center">
   <a href="http://120.92.209.146:8081/">🔥 Try It Now!</a> •
   <a href="#Install">🔧 Install</a> •
-  <a href="#RLHF-V Training"> 🙌 Build Your RLHF-V Model </a> •
+  <a href="#rlhf-v-training"> 🙌 Build Your RLHF-V Model </a> •
   <a href="#"> 📄 Our Paper </a>
 </p>
 
