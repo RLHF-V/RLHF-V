@@ -53,7 +53,7 @@ We show the cases of our RLHF-V model in two representative scenarios: (1) Short
 
 We present the RLHF-V-Hall dataset, which is a human preference dataset constructed by fine-grained segment-level human corrections. In practice, we obtain a total of 1.4k annotated data that includes a diverse set of detailed description instructions and question answering instructions.
 
-You can download our RLHF-V-Hall dataset from [RLHF-V-Hall_v0]((https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/tree/main)).
+You can download our RLHF-V-Hall dataset from [RLHF-V-Hall_v0](https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/tree/main).
 
 ## RLHF-V Weights
 
