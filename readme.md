@@ -109,10 +109,10 @@ bash ./script/train/run_RLHFV.sh ../RLHFV_checkpoints/dpo_exp master RLHFV 5.0 $
 
 If you find RLHF-V useful for your your research and applications, please cite using this BibTeX:
 ```bibtex
-@misc{yu2023muffin,
-      title={Reformulating Vision-Language Foundation Models and Datasets Towards Universal Multimodal Assistants},
-      author={Tianyu Yu, Jinyi Hu, Yuan Yao, Haoye Zhang, Yue Zhao, Chongyi Wang, Shan Wang, Yinxv Pan, Jiao Xue, Dahai Li, Zhiyuan Liu, Hai-Tao Zheng, Maosong Sun},
-      publisher={arXiv:2310.00653},
-      year={2023},
+@article{2023rlhf-v,
+  author      = {Tianyu Yu and Yuan Yao and Haoye Zhang and Taiwen He and Yifeng Han and Ganqu Cui and Jinyi Hu and Zhiyuan Liu and Hai-Tao Zheng and Maosong Sun},
+  title       = {RLHF-V: Towards Trustworthy MLLMs via Behavior Alignment from Fine-grained Correctional Human Feedback},
+  journal      = {arxiv},
+  year         = {2023},
 }
 ```
