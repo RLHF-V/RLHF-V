@@ -15,7 +15,7 @@ We collect <a href="https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/tr
 
 Benefits from the high data efficiency, it takes only 1 hour on 8 A100 GPUs for us to reduce the hallucination rate of the base model by 34.8%. Specifically, we conduct experiments on [Muffin](https://arxiv.org/abs/2310.00653), a MLLM that has a strong ability in image understanding and reasoning which is trained on [UniMM-Chat](https://huggingface.co/datasets/Yirany/UniMM-Chat/settings).
 
-Visist our [project page](https://rlhf-v.github.io) and [paper](assets/RLHF-V.pdf) to explore more!
+Visit our [project page](https://rlhf-v.github.io) and [paper](assets/RLHF-V.pdf) to explore more!
 
 
 ## Contents <!-- omit in toc -->
@@ -42,17 +42,17 @@ We also provide the [our SFT weights](https://huggingface.co/Yirany/MuffinQA/tre
 
 ## Install
 
-Please follow the instructions in the [original repository]((https://github.com/thunlp/muffin#install)) to install Muffin.
+Please follow the instructions in the [original repository](https://github.com/thunlp/muffin#install) to install Muffin.
 
 ## Evaluation
 
-The evaluation process is identical to the Muffin project, simply follow the instructions in [Muffin evaluation]((https://github.com/thunlp/Muffin#evaluation)) for deployment.
+The evaluation process is identical to the Muffin project, simply follow the instructions in [Muffin evaluation](https://github.com/thunlp/Muffin#evaluation) for deployment.
 
 ## RLHF-V Training
 
 1. Prepare training data
 
-Please download our [RLHF-V-Hall_v0 dataset]((https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/tree/main)), and save it to the following directory:
+Please download our [RLHF-V-Hall_v0 dataset](https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/tree/main), and save it to the following directory:
 
 ```
 ./data/RLHF-V-Hall_v0
