@@ -29,11 +29,10 @@ Visit our [project page](https://rlhf-v.github.io) and [paper](assets/RLHF-V.pdf
 - [Licenses](#licenses)
 - [Acknowledgement](#acknowledgement)
 
-## RLHF-V Data
+## Dataset
 
-We present the RLHF-V-Hall dataset, which is a human preference dataset constructed by fine-grained segment-level human corrections. In practice, we obtain a total of 1.4k annotated data that includes a diverse set of detailed description instructions and question-answering instructions.
+We present the [RLHF-V-Hall](https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/tree/main) dataset, which is a human preference dataset constructed by fine-grained segment-level human corrections. In practice, we obtain a total of 1.4k annotated data that includes a diverse set of detailed description instructions and question-answering instructions.
 
-You can download our RLHF-V-Hall dataset from [RLHF-V-Hall](https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/tree/main).
 
 ## RLHF-V Weights
 
