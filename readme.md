@@ -1,7 +1,7 @@
 <div align="center">
 
 # RLHF-V: Towards Trustworthy MLLMs via Behavior Alignment from Fine-grained Correctional Human Feedback
-<a href='https://rlhf-v.github.io'><img src='https://img.shields.io/badge/Project-Page-Green'> </a>
+<a href='https://rlhf-v.github.io'><img src='https://img.shields.io/badge/Project-Page-Green'></a>
 <a href='http://120.92.209.146:8081'><img src='https://img.shields.io/badge/Demo-Page-purple'></a>
 <a href='https://github.com/RLHF-V/RLHF-V/blob/main/assets/RLHF-V.pdf'><img src='https://img.shields.io/badge/Paper-PDF-orange'></a>
 ![License](https://img.shields.io/badge/License-BSD-blue.svg)
@@ -13,9 +13,9 @@ This repository hosts the code, data and model weight of **RLHF-V**, a novel fra
 
 We collect <a href="https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/tree/main">1.4k fine-grained correctional feedback data</a>, which can better credit the desired behavior, by asking human annotators to correct the hallucinated segments in model responses.
 
-Benefits from the high data efficiency, it takes only 1 hour on 8 A100 GPUs for us to reduce the hallucination rate of the base model by 34.8%. Specifically, we conduct experiments on [Muffin](https://arxiv.org/abs/2310.00653), a MLLM that has a strong ability in image understanding and reasoning which is trained on [UniMM-Chat](https://huggingface.co/datasets/Yirany/UniMM-Chat/settings).
+Benefits from the high data efficiency, it takes only 1 hour on 8 A100 GPUs for us to reduce the hallucination rate of the base model by 34.8%. Specifically, we conduct experiments on [Muffin](https://arxiv.org/abs/2310.00653), an MLLM that has a strong ability in image understanding and reasoning which is trained on [UniMM-Chat](https://huggingface.co/datasets/Yirany/UniMM-Chat/settings).
 
-Visist our [project page](https://rlhf-v.github.io) and [paper](assets/RLHF-V.pdf) to explore more!
+Visit our [project page](https://rlhf-v.github.io) and [paper](assets/RLHF-V.pdf) to explore more!
 
 
 ## Contents <!-- omit in toc -->
@@ -30,29 +30,29 @@ Visist our [project page](https://rlhf-v.github.io) and [paper](assets/RLHF-V.pd
 
 ## RLHF-V Data
 
-We present the RLHF-V-Hall dataset, which is a human preference dataset constructed by fine-grained segment-level human corrections. In practice, we obtain a total of 1.4k annotated data that includes a diverse set of detailed description instructions and question answering instructions.
+We present the RLHF-V-Hall dataset, which is a human preference dataset constructed by fine-grained segment-level human corrections. In practice, we obtain a total of 1.4k annotated data that includes a diverse set of detailed description instructions and question-answering instructions.
 
-You can download our RLHF-V-Hall dataset from [RLHF-V-Hall_v0](https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/tree/main).
+You can download our RLHF-V-Hall dataset from [RLHF-V-Hall](https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/tree/main).
 
 ## RLHF-V Weights
 
 We release RLHF-V model weights on [Hugging Face](https://huggingface.co/openbmb/RLHF-V_v0).
 
-We also provide the [our SFT weights](https://huggingface.co/Yirany/MuffinQA/tree/main) (uploading, will be available soon), which is the model checkpoint after finetuning Muffin on VQAv2 dataset.
+We also provide [our SFT weights](https://huggingface.co/Yirany/MuffinQA/tree/main) (uploading, will be available soon), which is the model checkpoint after finetuning Muffin on the VQAv2 dataset.
 
 ## Install
 
-Please follow the instructions in the [original repository]((https://github.com/thunlp/muffin#install)) to install Muffin.
+Please follow the instructions in the [original repository](https://github.com/thunlp/muffin#install) to install Muffin.
 
 ## Evaluation
 
-The evaluation process is identical to the Muffin project, simply follow the instructions in [Muffin evaluation]((https://github.com/thunlp/Muffin#evaluation)) for deployment.
+The evaluation process is identical to the Muffin project, simply follow the instructions in the [Muffin evaluation](https://github.com/thunlp/Muffin#evaluation) for deployment.
 
 ## RLHF-V Training
 
 1. Prepare training data
 
-Please download our [RLHF-V-Hall_v0 dataset]((https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/tree/main)), and save it to the following directory:
+Please download our [RLHF-V-Hall](https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/tree/main) dataset, and save it to the following directory:
 
 ```
 ./data/RLHF-V-Hall_v0
@@ -60,7 +60,7 @@ Please download our [RLHF-V-Hall_v0 dataset]((https://huggingface.co/datasets/Ha
 
 2. Prepare model checkpoint
 
-Please download our MuffinQA model checkpoint.
+Please download our SFT model checkpoint.
 
 3. Training
 
