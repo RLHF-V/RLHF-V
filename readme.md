@@ -86,7 +86,7 @@ bash ./script/train/run_RLHFV.sh ../RLHFV_checkpoints/dpo_exp master RLHFV 5.0 .
 
 - [Muffin](https://github.com/thunlp/muffin): the codebase we built upon.
 
-If you find RLHF-V useful for your your research and applications, please cite using this BibTeX:
+If you find RLHF-V useful for your research and applications, please cite using this BibTeX:
 ```bibtex
 @article{2023rlhf-v,
   author      = {Tianyu Yu and Yuan Yao and Haoye Zhang and Taiwen He and Yifeng Han and Ganqu Cui and Jinyi Hu and Zhiyuan Liu and Hai-Tao Zheng and Maosong Sun},
