@@ -38,7 +38,7 @@ You can download our RLHF-V-Hall dataset from [RLHF-V-Hall_v0](https://huggingfa
 
 We release RLHF-V model weights on [Hugging Face](https://huggingface.co/openbmb/RLHF-V_v0).
 
-We also provide the [our SFT weights](https://huggingface.co/Yirany/MuffinQA/tree/main) (uploading, will be available soon), which is the model checkpoint after finetuning Muffin on VQAv2 dataset.
+We also provide the [our SFT weights](https://huggingface.co/Yirany/RLHF-V_v0_SFT/tree/main) (uploading, will be available soon), which is the model checkpoint after finetuning Muffin on VQAv2 dataset.
 
 ## Install
 
