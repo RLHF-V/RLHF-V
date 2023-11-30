@@ -46,6 +46,7 @@ Please follow the instructions in the [original repository](https://github.com/t
 
 ## Evaluation
 
+The evaluation process is identical to the Muffin project, simply follow the instructions in [Muffin evaluation](https://github.com/thunlp/Muffin#evaluation) for deployment.
 The evaluation process is identical to the Muffin project, simply follow the instructions in the [Muffin evaluation](https://github.com/thunlp/Muffin#evaluation) for deployment.
 
 ## RLHF-V Training
