@@ -12,7 +12,7 @@
 
 ## Brief Introduction
 
-This repository hosts the code, data and model weight of **RLHF-V**, a novel framework that aligns Multimodal Large Language Models (MLLMs) behavior through fine-grained correctional human feedback.
+This repository hosts the code, data, and model weight of **RLHF-V**, a novel framework that aligns Multimodal Large Language Models (MLLMs) behavior through fine-grained correctional human feedback.
 
 We collect <a href="https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/tree/main">1.4k fine-grained correctional feedback data</a>, which can better credit the desired behavior, by asking human annotators to correct the hallucinated segments in model responses. Benefiting from the high data efficiency, it takes only 1 hour on 8 A100 GPUs for us to reduce the hallucination rate of the base model by 34.8%. Specifically, we conduct experiments on [Muffin](https://arxiv.org/abs/2310.00653), an MLLM that has a strong ability in image understanding and reasoning which is trained on [UniMM-Chat](https://huggingface.co/datasets/Yirany/UniMM-Chat/settings).
 
@@ -27,7 +27,7 @@ Visit our [project page](https://rlhf-v.github.io) and [paper](assets/RLHF-V.pdf
 - [Evaluation](#evaluation)
 - [RLHF-V Training](#rlhf-v-training)
 - [Licenses](#licenses)
-- [Acknowledgement](#acknowledgement)
+- [Acknowledgment](#acknowledgment)
 
 ## Dataset
 
@@ -50,8 +50,8 @@ jsonlines
 nltk==3.8.1
 spacy==3.7.0
 
-# download and install "en_core_web_trf" for spacy
-# the wheel version we use can be download from
+# Download and install "en_core_web_trf" for spacy
+# The wheel version we use can be downloaded from
 # https://github.com/explosion/spacy-models/releases/tag/en_core_web_trf-3.7.2
 # run pip install en_core_web_trf-3.7.2-py3-none-any.whl
 ```
@@ -126,9 +126,9 @@ Please download our [RLHF-V-Hall](https://huggingface.co/datasets/HaoyeZhang/RLH
 ./data/RLHF-V-Hall_v0
 ```
 
-For training simplicity, we generate logp value based on [RLHF-V_v0_SFT-13B](https://huggingface.co/Yirany/RLHF-V_v0_SFT/tree/main) model and provide it in our dataset in advance.
+For training simplicity, we generate the logp values based on [RLHF-V_v0_SFT-13B](https://huggingface.co/Yirany/RLHF-V_v0_SFT/tree/main) model and provide it in our dataset in advance.
 
-To generate logp by your own, you can run the following script:
+To generate logp values on your own, you can run the following script:
 
 ```
 cd Muffin
@@ -146,7 +146,6 @@ After installing the environment of Muffin, you can train your model as follows:
 ```
 cd Muffin
 
-
 bash ./script/train/run_RLHFV.sh ../RLHFV_checkpoints/dpo_exp master RLHFV 5.0 ../RLHF-V_SFT_weight checkpoint dpo_cvpr_docrp_vqa 1 320 40 0.5 True True
 ```
 
@@ -159,9 +158,11 @@ bash ./script/train/run_RLHFV.sh ../RLHFV_checkpoints/dpo_exp master RLHFV 5.0 .
 **Usage and License Notices**: The data, code, and checkpoint are intended and licensed for research use only. They are also restricted to uses that follow the license agreement of LLaMA, Vicuna, and Chat GPT. The dataset is CC BY NC 4.0 (allowing only non-commercial use) and models trained using the dataset should not be used outside of research purposes.
 
 
-## Acknowledgement
+## Acknowledgment
 
 - [Muffin](https://github.com/thunlp/muffin): the codebase we built upon.
+- [LLaVA-RLHF](https://github.com/llava-rlhf/LLaVA-RLHF): we utilize the MMHal-Bench data and evaluation code constructed by them.
+- [Object Hallucination](https://github.com/LisaAnne/Hallucination): we refer to the CHAIR evaluation code included in the repository.
 
 If you find RLHF-V useful for your research and applications, please cite using this BibTeX:
 ```bibtex
