@@ -146,7 +146,7 @@ After installing the environment of Muffin, you can train your model as follows:
 ```
 cd Muffin
 
-bash ./script/train/run_RLHFV.sh ../RLHFV_checkpoints/dpo_exp master RLHFV 5.0 ../RLHF-V_SFT_weight checkpoint dpo_cvpr_docrp_vqa 1 320 40 0.5 True True
+bash ./script/train/run_RLHFV.sh ./RLHFV_checkpoints/dpo_exp master RLHFV 5.0 ./RLHF-V_SFT_weight RLHF-V-Hall_v0 1 320 40 0.5 True True
 ```
 
 ## Licenses
