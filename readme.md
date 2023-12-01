@@ -123,7 +123,7 @@ bash ./script/eval/eval_muffin_mmhal.sh ./RLHF-V_weight ./results/RLHF-V {YOUR_O
 Please download our [RLHF-V-Hall](https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/tree/main) dataset, and save it to the following directory:
 
 ```
-./data/RLHF-V-Hall_v0
+Muffin/data/RLHF-V-Hall_v0
 ```
 
 For training simplicity, we generate the logp values based on [RLHF-V_v0_SFT-13B](https://huggingface.co/Yirany/RLHF-V_v0_SFT/tree/main) model and provide it in our dataset in advance.
