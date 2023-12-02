@@ -27,7 +27,7 @@ Visit our [project page](https://rlhf-v.github.io) and [paper](assets/RLHF-V.pdf
 - [Evaluation](#evaluation)
 - [RLHF-V Training](#rlhf-v-training)
 - [Licenses](#licenses)
-- [Acknowledgment](#acknowledgment)
+- [Acknowledgement](#acknowledgement)
 
 ## Dataset
 
@@ -158,7 +158,7 @@ bash ./script/train/run_RLHFV.sh ./RLHFV_checkpoints/dpo_exp master RLHFV 5.0 ./
 **Usage and License Notices**: The data, code, and checkpoint are intended and licensed for research use only. They are also restricted to uses that follow the license agreement of LLaMA, Vicuna, and Chat GPT. The dataset is CC BY NC 4.0 (allowing only non-commercial use) and models trained using the dataset should not be used outside of research purposes.
 
 
-## Acknowledgment
+## Acknowledgement
 
 - [Muffin](https://github.com/thunlp/muffin): the codebase we built upon.
 - [LLaVA-RLHF](https://github.com/llava-rlhf/LLaVA-RLHF): we utilize the MMHal-Bench data and evaluation code constructed by them.
