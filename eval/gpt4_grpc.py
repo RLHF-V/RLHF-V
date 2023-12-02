@@ -3,8 +3,6 @@ import time
 
 NUM_SECONDS_TO_SLEEP = 0.5
 
-openai.api_base = "https://api.zhiyungpt.com/v1"
-
 class Chat:
     def __init__(self, model="", timeout_sec=20, openai_apikey=''):
         self.model = model
