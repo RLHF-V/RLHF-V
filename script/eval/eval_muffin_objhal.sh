@@ -61,7 +61,7 @@ python ./eval/eval_gpt_obj_halbench.py \
     --cap_type $answer_file_name \
     --org_folder $q_file \
     --use_gpt \
-    --openai_key $4 #'sk-TKMTtA1kmTEKNLvZ4d5bC6Fe934749A5B370Fb71037253A9'
+    --openai_key $4
 
 python ./eval/summarize_gpt_obj_halbench_review.py $save_dir > $save_dir/obj_halbench_scores.txt
 
