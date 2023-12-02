@@ -64,7 +64,6 @@ python ./eval/eval_gpt_mmhal.py \
     --response $answer_file.template.json \
     --evaluation $answer_file.mmhal_test_eval.json \
     --api-key $3 >> ${answer_file}.eval_log.txt
-    #'sk-TKMTtA1kmTEKNLvZ4d5bC6Fe934749A5B370Fb71037253A9'
 
 # Merge gpt4 evaluation to the original model outputs, can be ignore
 python ./eval/merge_mmhal_review_with_predict.py \
