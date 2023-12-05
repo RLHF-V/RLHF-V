@@ -107,7 +107,7 @@ bash ./script/eval/batch_objhal_review.sh {base_dir} {file_name} {YOUR_COCO2014_
 
 1. Prepare MMHal Data
 
-Please download the MMHal evaluation data from [here](https://drive.google.com/file/d/1mQyAbeGgRyiVV6qjVkUI1uY_g9E-bDTH/view?usp=sharing), and save the file in `eval/data`. 
+Please download the MMHal evaluation data [here](https://drive.google.com/file/d/1mQyAbeGgRyiVV6qjVkUI1uY_g9E-bDTH/view?usp=sharing), and save the file in `eval/data`. 
 
 3. Run the following script to generate, evaluate, and summarize results for MMHal Bench:
 
