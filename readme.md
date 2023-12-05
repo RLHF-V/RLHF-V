@@ -20,7 +20,7 @@ Visit our [project page](https://rlhf-v.github.io) and [paper](https://arxiv.org
 
 ## News
 
-* [12/04] Our paper is accesible at [arxiv](https://arxiv.org/abs/2312.00849) now. We are still working hard to improve the data **diversity** and **amount**, and more high-qulity data are just on the way!
+* [12/04] Our paper is accesible at [arxiv](https://arxiv.org/abs/2312.00849) now. We are still working hard to improve the data **diversity** and **amount**. More high-qulity data are just on the way!
 
 ## Contents <!-- omit in toc -->
 
