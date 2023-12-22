@@ -20,11 +20,13 @@ Visit our [project page](https://rlhf-v.github.io) and [paper](https://arxiv.org
 
 ## News
 
+* [12/15] We release a [new subset](https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/blob/main/RLHF-V-Hall_v0_LLaVA_dpo_with_rlhf-v-sft_logp_train-1065.tsv) in our huggingface dataset! It contains an amount of **1,065 fine-grained human preference data** annotated on the outputs of **LLaVA-13B**. 
+
 * [12/04] Our paper is accesible at [arxiv](https://arxiv.org/abs/2312.00849) now. We are still working hard to improve the data **diversity** and **amount**. More high-qulity data are just on the way!
 
 ## Contents <!-- omit in toc -->
 
-- [RLHF-V Data](#rlhf-v-data)
+- [Dataset](#dataset)
 - [RLHF-V Weights](#rlhf-v-weights)
 - [Install](#install)
 - [Evaluation](#evaluation)
