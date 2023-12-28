@@ -16,13 +16,13 @@ This repository hosts the code, data, and model weight of **RLHF-V**, a novel fr
 
 We collect <a href="https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/tree/main">1.4k fine-grained correctional feedback data</a>, which can better credit the desired behavior, by asking human annotators to correct the hallucinated segments in model responses. Benefiting from the high data efficiency, it takes only 1 hour on 8 A100 GPUs for us to reduce the hallucination rate of the base model by 34.8%. Specifically, we conduct experiments on [Muffin](https://arxiv.org/abs/2310.00653), an MLLM that has a strong ability in image understanding and reasoning which is trained on [UniMM-Chat](https://huggingface.co/datasets/Yirany/UniMM-Chat/settings).
 
-Visit our [project page](https://rlhf-v.github.io) and [paper](https://arxiv.org/abs/2312.00849) to explore more!
+Visit our 🏠 [project page](https://rlhf-v.github.io) and 📃 [paper](https://arxiv.org/abs/2312.00849) to explore more! And don't miss the to try our interactive 🕹 [demo](http://120.92.209.146:8081)!
 
-## News
+## 🎈News
 
-* [12/15] We release a [new subset](https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/blob/main/RLHF-V-Hall_v0_LLaVA_dpo_with_rlhf-v-sft_logp_train-1065.tsv) in our huggingface dataset! It contains an amount of **1,065 fine-grained human preference data** annotated on the outputs of **LLaVA-13B**. 
+* [12/15] 🗂 We release a [new subset](https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/blob/main/RLHF-V-Hall_v0_LLaVA_dpo_with_rlhf-v-sft_logp_train-1065.tsv) in our huggingface dataset! It contains an amount of **1,065 fine-grained human preference data** annotated on the outputs of **LLaVA-13B**. 
 
-* [12/04] Our paper is accesible at [arxiv](https://arxiv.org/abs/2312.00849) now. We are still working hard to improve the data **diversity** and **amount**. More high-qulity data are just on the way!
+* [12/04] 📃 Our paper is accesible at [arxiv](https://arxiv.org/abs/2312.00849) now. We are still working hard to improve the data **diversity** and **amount**. More high-qulity data are just on the way!
 
 ## Contents <!-- omit in toc -->
 
@@ -36,18 +36,53 @@ Visit our [project page](https://rlhf-v.github.io) and [paper](https://arxiv.org
 
 ## Dataset
 
-We present the [RLHF-V-Hall](https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/tree/main) dataset, which is a human preference dataset constructed by fine-grained segment-level human corrections. In practice, we obtain a total of 1.4k annotated data that includes a diverse set of detailed description instructions and question-answering instructions.
+We present the [RLHF-V-Dataset](https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Dataset), which is a human preference dataset constructed by fine-grained segment-level human corrections. In practice, we obtain a total of 1.4k annotated data that includes a diverse set of detailed description instructions and question-answering instructions.
 
 
 ## RLHF-V Weights
 
 We release RLHF-V model weights on [Hugging Face](https://huggingface.co/openbmb/RLHF-V_v0).
 
-We also provide [our SFT weights](https://huggingface.co/Yirany/RLHF-V_v0_SFT) (uploading, will be available soon), which is the model checkpoint after finetuning Muffin on the VQAv2 dataset.
+We also provide [our SFT weights](https://huggingface.co/Yirany/RLHF-V_v0_SFT), which is the model checkpoint after finetuning Muffin on the VQAv2 dataset.
 
 ## Install
 
-Please follow the instructions in the [original repository](https://github.com/thunlp/muffin#install) to install Muffin.
+1. Install Muffin
+```
+cd RLHF-V
+git clone https://github.com/thunlp/muffin
+
+cd Muffin
+# Creating conda environment
+conda create -n muffin python=3.10
+conda activate muffin
+
+# Installing dependencies
+pip install -e .
+
+# Install specific version of transformers to make sure you can reproduce the experimental results in our papers
+git clone --recursive git@github.com:huggingface/transformers.git
+cd transformers
+git checkout a92e0ad2e20ef4ce28410b5e05c5d63a5a304e65
+pip install .
+cd ..
+```
+
+2. Prepare training environment
+
+Install additional packages if you need to do training.
+```
+git clone --recursive https://github.com/Dao-AILab/flash-attention.git
+cd flash-attention
+
+# Note: Uncomment the following line if you have CUDA version <= 11.4
+# git checkout ad11394
+
+MAX_JOBS=8 python setup.py install
+cd ..
+```
+
+3. Prepare evaluation environment
 
 To run Object HalBench evaluation, you also need the following packages:
 ```
@@ -95,7 +130,7 @@ Please replace `{YOUR_COCO2014_ANNOTATION_DIR}` with the path for COCO2014 annot
 ```
 # cd Muffin
 
-bash ./script/eval/eval_muffin_objhal.sh ./RLHF-V_weight ./results/RLHF-V {YOUR_COCO2014_ANNOTATION_DIR} {YOUR_OPENAI_API_KEY}
+bash ./script/eval_muffin_objhal.sh ./RLHF-V_weight ./results/RLHF-V {YOUR_COCO2014_ANNOTATION_DIR} {YOUR_OPENAI_API_KEY}
 ```
 
 3. Evaluate existing inference files
@@ -105,7 +140,7 @@ bash ./script/eval/eval_muffin_objhal.sh ./RLHF-V_weight ./results/RLHF-V {YOUR_
 ```
 # cd Muffin
 
-bash ./script/eval/batch_objhal_review.sh {base_dir} {file_name} {YOUR_COCO2014_ANNOTATION_DIR} {YOUR_OPENAI_API_KEY}
+bash ./script/batch_objhal_review.sh {base_dir} {file_name} {YOUR_COCO2014_ANNOTATION_DIR} {YOUR_OPENAI_API_KEY}
 ```
 
 ### MMHal Bench
@@ -119,7 +154,7 @@ Please download the MMHal evaluation data [here](https://drive.google.com/file/d
 ```
 # cd RLHF-V
 
-bash ./script/eval/eval_muffin_mmhal.sh ./RLHF-V_weight ./results/RLHF-V {YOUR_OPENAI_API_KEY}
+bash ./script/eval_muffin_mmhal.sh ./RLHF-V_weight ./results/RLHF-V {YOUR_OPENAI_API_KEY}
 ```
 
 
@@ -129,20 +164,20 @@ bash ./script/eval/eval_muffin_mmhal.sh ./RLHF-V_weight ./results/RLHF-V {YOUR_O
 
 1. Prepare training data
 
-Please download our [RLHF-V-Hall](https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/tree/main) dataset, and save it to the following directory:
+Please download our [RLHF-V-Dataset](https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Dataset) dataset, and save it to the following directory:
 
 ```
-Muffin/data/RLHF-V-Hall_v0
+Muffin/data/RLHF-V-Dataset
 ```
 
-For training simplicity, we generate the logp values based on [RLHF-V_v0_SFT-13B](https://huggingface.co/Yirany/RLHF-V_v0_SFT/tree/main) model and provide it in our dataset in advance.
+For training simplicity, we generate the logp values based on [RLHF-V_SFT-13B](https://huggingface.co/Yirany/RLHF-V_v0_SFT/tree/main) model and provide it in our dataset in advance.
 
 To generate logp values on your own, you can run the following script:
 
 ```
 cd Muffin
 
-bash ./script/eval/eval_muffin_inference_logp.sh ./RLHF-V_SFT_weight ./data/RLHF-V-Hall_v0 RLHF-V-Hall_v0-1401.tsv
+bash ./script/eval_muffin_inference_logp.sh ./RLHF-V_SFT_weight ./data/RLHF-V-Dataset RLHF-V-Dataset-1401.tsv
 ```
 
 2. Prepare model checkpoint
@@ -155,7 +190,7 @@ After installing the environment of Muffin, you can train your model as follows:
 ```
 cd Muffin
 
-bash ./script/train/run_RLHFV.sh ./RLHFV_checkpoints/dpo_exp master RLHFV 5.0 ./RLHF-V_SFT_weight RLHF-V-Hall_v0 1 320 40 0.5 True True
+bash ./script/train/run_RLHFV.sh ./RLHFV_checkpoints/dpo_exp master RLHFV 5.0 ./RLHF-V_SFT_weight RLHF-V-Dataset 1 320 40 0.5 False True
 ```
 
 ## Licenses
