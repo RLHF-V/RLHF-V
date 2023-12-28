@@ -48,7 +48,7 @@ We also provide [our SFT weights](https://huggingface.co/Yirany/RLHF-V_v0_SFT), 
 ## Install
 
 1. Install Muffin
-```
+```bash
 cd RLHF-V
 git clone https://github.com/thunlp/muffin
 
@@ -71,7 +71,7 @@ cd ..
 2. Prepare training environment
 
 Install additional packages if you need to do training.
-```
+```bash
 git clone --recursive https://github.com/Dao-AILab/flash-attention.git
 cd flash-attention
 
@@ -85,7 +85,7 @@ cd ..
 3. Prepare evaluation environment
 
 To run Object HalBench evaluation, you also need the following packages:
-```
+```bash
 jsonlines
 nltk==3.8.1
 spacy==3.7.0
@@ -102,7 +102,7 @@ spacy==3.7.0
 
 Run the following script to generate, evaluate, and summarize results for LLaVA Bench:
 
-```
+```bash
 # cd RLHF-V
 
 bash ./script/eval/eval_muffin_llavabench.sh ./RLHF-V_weight ./results/RLHF-V {YOUR_OPENAI_API_KEY}
@@ -114,7 +114,7 @@ bash ./script/eval/eval_muffin_llavabench.sh ./RLHF-V_weight ./results/RLHF-V {Y
 
 The evaluation of Object HalBench relies on the caption and segmentation annotations from the COCO2014 dataset. Please first download the COCO2014 dataset from the COCO dataset's official website.
 
-```
+```bash
 mkdir coco2014
 cd coco2014
 
@@ -127,7 +127,7 @@ unzip annotations_trainval2014.zip
 
 Please replace `{YOUR_COCO2014_ANNOTATION_DIR}` with the path for COCO2014 annotation directory(e.g. `./coco2014/annotations`), and replace `{YOUR_OPENAI_API_KEY}` with a valid OpenAI api-key.
 
-```
+```bash
 # cd Muffin
 
 bash ./script/eval_muffin_objhal.sh ./RLHF-V_weight ./results/RLHF-V {YOUR_COCO2014_ANNOTATION_DIR} {YOUR_OPENAI_API_KEY}
@@ -137,7 +137,7 @@ bash ./script/eval_muffin_objhal.sh ./RLHF-V_weight ./results/RLHF-V {YOUR_COCO2
 
 `{base_dir}` is the folder path with files for evaluation, and `{file_name}` is a shared substring in these files. Files within `{base_dir}` and its subdirectories containing `{file_name}` will be evaluated.
 
-```
+```bash
 # cd Muffin
 
 bash ./script/batch_objhal_review.sh {base_dir} {file_name} {YOUR_COCO2014_ANNOTATION_DIR} {YOUR_OPENAI_API_KEY}
@@ -151,7 +151,7 @@ Please download the MMHal evaluation data [here](https://drive.google.com/file/d
 
 2. Run the following script to generate, evaluate, and summarize results for MMHal Bench:
 
-```
+```bash
 # cd RLHF-V
 
 bash ./script/eval_muffin_mmhal.sh ./RLHF-V_weight ./results/RLHF-V {YOUR_OPENAI_API_KEY}
@@ -174,7 +174,7 @@ For training simplicity, we generate the logp values based on [RLHF-V_SFT-13B](h
 
 To generate logp values on your own, you can run the following script:
 
-```
+```bash
 cd Muffin
 
 bash ./script/eval_muffin_inference_logp.sh ./RLHF-V_SFT_weight ./data/RLHF-V-Dataset RLHF-V-Dataset-1401.tsv
@@ -187,7 +187,7 @@ Please download our [SFT model checkpoint](https://huggingface.co/Yirany/RLHF-V_
 3. Training
 
 After installing the environment of Muffin, you can train your model as follows:
-```
+```bash
 cd Muffin
 
 bash ./script/train/run_RLHFV.sh ./RLHFV_checkpoints/dpo_exp master RLHFV 5.0 ./RLHF-V_SFT_weight RLHF-V-Dataset 1 320 40 0.5 False True
