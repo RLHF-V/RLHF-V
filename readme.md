@@ -14,13 +14,13 @@
 
 This repository hosts the code, data, and model weight of **RLHF-V**, a novel framework that aligns Multimodal Large Language Models (MLLMs) behavior through fine-grained correctional human feedback.
 
-We collect <a href="https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/tree/main">1.4k fine-grained correctional feedback data</a>, which can better credit the desired behavior, by asking human annotators to correct the hallucinated segments in model responses. Benefiting from the high data efficiency, it takes only 1 hour on 8 A100 GPUs for us to reduce the hallucination rate of the base model by 34.8%. Specifically, we conduct experiments on [Muffin](https://arxiv.org/abs/2310.00653), an MLLM that has a strong ability in image understanding and reasoning which is trained on [UniMM-Chat](https://huggingface.co/datasets/Yirany/UniMM-Chat/settings).
+We collect <a href="https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Dataset">1.4k fine-grained correctional feedback data</a>, which can better credit the desired behavior, by asking human annotators to correct the hallucinated segments in model responses. Benefiting from the high data efficiency, it takes only 1 hour on 8 A100 GPUs for us to reduce the hallucination rate of the base model by 34.8%. Specifically, we conduct experiments on [Muffin](https://arxiv.org/abs/2310.00653), an MLLM that has a strong ability in image understanding and reasoning which is trained on [UniMM-Chat](https://huggingface.co/datasets/Yirany/UniMM-Chat/settings).
 
 Visit our 🏠 [project page](https://rlhf-v.github.io) and 📃 [paper](https://arxiv.org/abs/2312.00849) to explore more! And don't miss the to try our interactive 🔥 [demo](http://120.92.209.146:8081)!
 
 ## 🎈News
 
-* [12/15] 🗂 We release a [new subset](https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Hall_v0/blob/main/RLHF-V-Hall_v0_LLaVA_dpo_with_rlhf-v-sft_logp_train-1065.tsv) in our huggingface dataset! It contains an amount of **1,065 fine-grained human preference data** annotated on the outputs of **LLaVA-13B**. 
+* [12/15] 🗂 We merge a new subset in our huggingface dataset! It contains an amount of **1,065 fine-grained human preference data** annotated on the outputs of **LLaVA-13B**. 
 
 * [12/04] 📃 Our paper is accesible at [arxiv](https://arxiv.org/abs/2312.00849) now. We are still working hard to improve the data **diversity** and **amount**. More high-qulity data are just on the way!
 
@@ -128,19 +128,9 @@ unzip annotations_trainval2014.zip
 Please replace `{YOUR_COCO2014_ANNOTATION_DIR}` with the path for COCO2014 annotation directory(e.g. `./coco2014/annotations`), and replace `{YOUR_OPENAI_API_KEY}` with a valid OpenAI api-key.
 
 ```bash
-# cd Muffin
+# cd RLHF-V
 
 bash ./script/eval_muffin_objhal.sh ./RLHF-V_weight ./results/RLHF-V {YOUR_COCO2014_ANNOTATION_DIR} {YOUR_OPENAI_API_KEY}
-```
-
-3. Evaluate existing inference files
-
-`{base_dir}` is the folder path with files for evaluation, and `{file_name}` is a shared substring in these files. Files within `{base_dir}` and its subdirectories containing `{file_name}` will be evaluated.
-
-```bash
-# cd Muffin
-
-bash ./script/batch_objhal_review.sh {base_dir} {file_name} {YOUR_COCO2014_ANNOTATION_DIR} {YOUR_OPENAI_API_KEY}
 ```
 
 ### MMHal Bench
@@ -164,7 +154,7 @@ bash ./script/eval_muffin_mmhal.sh ./RLHF-V_weight ./results/RLHF-V {YOUR_OPENAI
 
 1. Prepare training data
 
-Please download our [RLHF-V-Dataset](https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Dataset) dataset, and save it to the following directory:
+Please download the TSV files for our RLHF-V-Dataset from [Google Drive](https://drive.google.com/drive/folders/1iJ9FvI2ENK9xjN1nAFMgyB5zSTTL1BE6?usp=drive_link), and save it to the following directory:
 
 ```
 Muffin/data/RLHF-V-Dataset
