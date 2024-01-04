@@ -154,7 +154,7 @@ bash ./script/eval_muffin_mmhal.sh ./RLHF-V_weight ./results/RLHF-V {YOUR_OPENAI
 
 1. Prepare training data
 
-Please download the TSV files for our RLHF-V-Dataset from [Google Drive](https://drive.google.com/drive/folders/1iJ9FvI2ENK9xjN1nAFMgyB5zSTTL1BE6?usp=drive_link), and save it to the following directory:
+Please download the TSV files for our RLHF-V-Dataset from [Google Drive](https://drive.google.com/drive/folders/1iJ9FvI2ENK9xjN1nAFMgyB5zSTTL1BE6?usp=sharing), and save it to the following directory:
 
 ```
 Muffin/data/RLHF-V-Dataset
