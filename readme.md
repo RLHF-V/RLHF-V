@@ -20,7 +20,7 @@ Visit our 🏠 [project page](https://rlhf-v.github.io) and 📃 [paper](https:/
 
 ## 🎈News
 
-* [2024.01.06] 🔥 A **larger, more diverse** set of fine-grained human correction data is available now! 🔥 The newly released data has about 5.7k of fine-grained human correction data that covers the **output of more powerful models** (Qwen-VL-Chat, InstructBLIP, etc.). We also expand the image types from everyday scenes to **diverse styles and themes** (WikiArt, landmarks, scene texts, etc.).
+* [2024.01.06] 🔥 A **larger, more diverse** set of fine-grained human correction data is available at [hugging face](https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Dataset) now! 🔥 The newly released data has about 5.7k of fine-grained human correction data that covers the **output of more powerful models** (Qwen-VL-Chat, InstructBLIP, etc.). We also expand the image types from everyday scenes to **diverse styles and themes** (WikiArt, landmarks, scene texts, etc.).
 * [2023.12.15] 🗂 We merge a new subset in our huggingface dataset! It contains an amount of **1,065 fine-grained human preference data** annotated on the outputs of **LLaVA-13B**. 
 
 * [2023.12.04] 📃 Our paper is accesible at [arxiv](https://arxiv.org/abs/2312.00849) now. We are still working hard to improve the data **diversity** and **amount**. More high-qulity data are just on the way!
