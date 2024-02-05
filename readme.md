@@ -156,35 +156,41 @@ bash ./script/eval_muffin_mmhal.sh ./RLHF-V_weight ./results/RLHF-V {YOUR_OPENAI
 
 ## RLHF-V Training
 
-1. Prepare training data
+1. Prepare environment
 
-Please download the TSV files for our RLHF-V-Dataset from [Google Drive](https://drive.google.com/drive/folders/1iJ9FvI2ENK9xjN1nAFMgyB5zSTTL1BE6?usp=sharing), and save it to the following directory:
-
+Please follow the instructions in the [Install](#install) section to prepare the training environment. And make sure to **upgrade to the latest code base of [Muffin](https://github.com/thunlp/muffin)**:
 ```
-Muffin/data/RLHF-V-Dataset
-```
-
-For training simplicity, we generate the logp values based on [RLHF-V_SFT-13B](https://huggingface.co/Yirany/RLHF-V_v0_SFT/tree/main) model and provide it in our dataset in advance.
-
-To generate logp values on your own, you can run the following script:
-
-```bash
 cd Muffin
 
-bash ./script/eval_muffin_inference_logp.sh ./RLHF-V_SFT_weight ./data/RLHF-V-Dataset RLHF-V-Dataset-1401.tsv
+git pull
+pip install -e .
 ```
 
 2. Prepare model checkpoint
 
-Please download our [SFT model checkpoint](https://huggingface.co/Yirany/RLHF-V_v0_SFT/tree/main).
+Please download our [SFT model checkpoint](https://huggingface.co/Yirany/RLHF-V_v0_SFT/tree/main) and save it to `Muffin/RLHF-V_SFT_weight`.
 
 3. Training
 
-After installing the environment of Muffin, you can train your model as follows:
+Please make sure to **upgrade to the latest code base of [Muffin](https://github.com/thunlp/muffin)**. After installing the environment of Muffin, you can train your model as follows. This script will automatically download our open-sourced training data from HuggingFace, generate logps by [our SFT model](https://huggingface.co/Yirany/RLHF-V_v0_SFT/tree/main), and do DDPO training:
 ```bash
 cd Muffin
 
-bash ./script/train/run_RLHFV.sh ./RLHFV_checkpoints/dpo_exp master RLHFV 5.0 ./RLHF-V_SFT_weight RLHF-V-Dataset 1 320 40 0.5 False True
+ref_model=./RLHF-V_SFT_weight
+
+bash ./script/train/run_RLHFV.sh \
+    ./RLHFV_checkpoints/dpo_exp \
+    master \
+    RLHFV \
+    1.1 \
+    $ref_model \
+    ./RLHF-V-Dataset \
+    RLHFV_SFT \
+    2160 \
+    360 \
+    0.1 \
+    False \
+    True
 ```
 
 ## Licenses
