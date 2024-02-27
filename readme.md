@@ -210,10 +210,10 @@ bash ./script/train/run_RLHFV.sh \
 
 If you find RLHF-V useful for your research and applications, please cite using this BibTeX:
 ```bibtex
-@article{2023rlhf-v,
-  author      = {Tianyu Yu and Yuan Yao and Haoye Zhang and Taiwen He and Yifeng Han and Ganqu Cui and Jinyi Hu and Zhiyuan Liu and Hai-Tao Zheng and Maosong Sun and Tat-Seng Chua},
-  title       = {RLHF-V: Towards Trustworthy MLLMs via Behavior Alignment from Fine-grained Correctional Human Feedback},
-  journal      = {arxiv},
-  year         = {2023},
+@article{yu2023rlhf,
+  title={Rlhf-v: Towards trustworthy mllms via behavior alignment from fine-grained correctional human feedback},
+  author={Yu, Tianyu and Yao, Yuan and Zhang, Haoye and He, Taiwen and Han, Yifeng and Cui, Ganqu and Hu, Jinyi and Liu, Zhiyuan and Zheng, Hai-Tao and Sun, Maosong and others},
+  journal={arXiv preprint arXiv:2312.00849},
+  year={2023}
 }
 ```
