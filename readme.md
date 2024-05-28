@@ -214,12 +214,23 @@ bash ./script/train/run_RLHFV.sh \
 - [LLaVA-RLHF](https://github.com/llava-rlhf/LLaVA-RLHF): we utilize the MMHal-Bench data and evaluation code constructed by them.
 - [Object Hallucination](https://github.com/LisaAnne/Hallucination): we refer to the CHAIR evaluation code included in the repository.
 
-If you find RLHF-V useful for your research and applications, please cite using this BibTeX:
+
+## Citation
+
+If you find our model/dataset/paper/code useful for your research and applications, please cite using this BibTeX 📝 :
+
 ```bibtex
 @article{yu2023rlhf,
   title={Rlhf-v: Towards trustworthy mllms via behavior alignment from fine-grained correctional human feedback},
   author={Yu, Tianyu and Yao, Yuan and Zhang, Haoye and He, Taiwen and Han, Yifeng and Cui, Ganqu and Hu, Jinyi and Liu, Zhiyuan and Zheng, Hai-Tao and Sun, Maosong and others},
   journal={arXiv preprint arXiv:2312.00849},
   year={2023}
+}
+
+@article{yu2024rlaifv,
+  title={RLAIF-V: Aligning MLLMs through Open-Source AI Feedback for Super GPT-4V Trustworthiness}, 
+  author={Tianyu Yu and Haoye Zhang and Yuan Yao and Yunkai Dang and Da Chen and Xiaoman Lu and Ganqu Cui and Taiwen He and Zhiyuan Liu and Tat-Seng Chua and Maosong Sun},
+  journal={arXiv preprint arXiv:2405.17220},
+  year={2024},
 }
 ```
