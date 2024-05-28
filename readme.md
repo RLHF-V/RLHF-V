@@ -19,6 +19,8 @@ We collect <a href="https://huggingface.co/datasets/HaoyeZhang/RLHF-V-Dataset">f
 Visit our 🏠 [project page](https://rlhf-v.github.io) and 📃 [paper](https://arxiv.org/abs/2312.00849) to explore more! And don't miss to try our interactive 🔥 [demo](http://120.92.209.146:8081)!
 
 ## 🎈News
+
+* [2024.05.28] 📃 Our RLAIF-V paper is accesible at [arxiv](https://arxiv.org/abs/2405.17220) now!
 * [2024.05.20] 🎉 We introduce [RLAIF-V](https://github.com/RLHF-V/RLAIF-V), our new alignment framework that utilize open-source models for feedback generation and reach **super GPT-4V trustworthiness**. You can download the corresponding [🤗 dataset](https://huggingface.co/datasets/openbmb/RLAIF-V-Dataset) now! 
 * [2024.04.11] 🔥 Our data is used in [MiniCPM-V 2.0](https://huggingface.co/openbmb/MiniCPM-V-2), an **end-side** multimodal large language model that exhibits **comparable trustworthiness with GPT-4V**!
 * [2024.03.10] 📃 Our RLHF-V is accepted by [CVPR 2024](https://cvpr.thecvf.com/virtual/2024/poster/31610)!
