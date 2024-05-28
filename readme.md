@@ -217,7 +217,7 @@ bash ./script/train/run_RLHFV.sh \
 
 ## Citation
 
-If you find our model/dataset/paper/code useful for your research and applications, please cite using this BibTeX 📝 :
+If you find our model/code/data/paper helpful, please consider cite our papers 📝 and star us ⭐️！
 
 ```bibtex
 @article{yu2023rlhf,
